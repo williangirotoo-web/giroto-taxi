@@ -31,6 +31,11 @@ export default function RootLayout({
             gtag('config', 'AW-634068108');
           `}
         </Script>
+        <Script id="google-ads-conversion" strategy="afterInteractive">
+          {`
+            gtag('event', 'conversion', {'send_to': 'AW-634068108/0kpoCM-S8pscEIy5rK4C'});
+          `}
+        </Script>
       </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
