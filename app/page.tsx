@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import WAButton from "@/components/WAButton";
 import { pagesData } from "@/lib/pages-data";
+import WAButton from "@/components/WAButton";
 
 export const metadata: Metadata = {
   title: "Táxi em Umuarama 24h | Giroto Táxi — (44) 99891-3040",
@@ -11,14 +11,6 @@ export const metadata: Metadata = {
 
 const WA_LINK = "https://wa.me/5544998913040?text=Ol%C3%A1!%20Preciso%20de%20um%20t%C3%A1xi%20em%20Umuarama%20agora.";
 const PHONE = "tel:+5544998913040";
-
-
-
-
-  if (typeof gtag !== 'undefined') {
-    gtag('event', 'conversion', { 'send_to': 'AW-634068108/0kpoCM-S8pscEIy5rK4C' });
-  }
-}
 
 const services = [
   { icon: "🚖", title: "Táxi em Umuarama", desc: "Corridas rápidas por todos os bairros de Umuarama, 24 horas por dia.", slug: "corridas-taxi-umuarama" },
@@ -91,7 +83,6 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="bg-[#080808] text-white font-sans antialiased">
 
-        {/* TOP BAR MOBILE */}
         <div className="md:hidden fixed top-0 left-0 right-0 z-50 bg-yellow-400 text-black text-xs font-bold text-center py-1.5 flex items-center justify-center gap-2">
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-600 opacity-75"></span>
@@ -100,7 +91,6 @@ export default function Home() {
           Disponível Agora • Atendimento Imediato 24h
         </div>
 
-        {/* NAV */}
         <nav className="fixed top-6 md:top-0 left-0 right-0 z-40 bg-black/80 backdrop-blur-md border-b border-white/5">
           <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2">
@@ -117,14 +107,12 @@ export default function Home() {
               <Link href="/blog" className="hover:text-yellow-400 transition-colors">Blog</Link>
               <Link href="#contato" className="hover:text-yellow-400 transition-colors">Contato</Link>
             </div>
-            <WAButton
-              className="flex items-center gap-2 bg-yellow-400 text-black font-bold px-5 py-2 rounded-full text-sm hover:bg-yellow-300 transition-colors">
+            <WAButton className="flex items-center gap-2 bg-yellow-400 text-black font-bold px-5 py-2 rounded-full text-sm hover:bg-yellow-300 transition-colors">
               Chamar no WhatsApp
-            </a>
+            </WAButton>
           </div>
         </nav>
 
-        {/* HERO */}
         <section className="relative min-h-screen flex items-center justify-center pt-24 pb-32 md:pb-0 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 via-transparent to-transparent pointer-events-none" />
           <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
@@ -143,10 +131,9 @@ export default function Home() {
                 Serviço de táxi em Umuarama com atendimento imediato, motoristas profissionais e conforto para qualquer destino.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 mb-8">
-                <WAButton
-                  className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-8 py-4 rounded-2xl text-base transition-all shadow-[0_0_40px_rgba(34,197,94,0.3)]">
+                <WAButton className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-8 py-4 rounded-2xl text-base transition-all shadow-[0_0_40px_rgba(34,197,94,0.3)]">
                   Chamar no WhatsApp
-                </a>
+                </WAButton>
                 <a href={PHONE}
                   className="flex items-center justify-center gap-2 border border-white/20 hover:border-yellow-400 hover:text-yellow-400 text-white font-semibold px-8 py-4 rounded-2xl text-base transition-all">
                   (44) 99891-3040
@@ -174,7 +161,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* SERVICES */}
         <section id="servicos" className="py-24 border-t border-white/5">
           <div className="max-w-6xl mx-auto px-4">
             <div className="text-center mb-16">
@@ -196,7 +182,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* HOW IT WORKS */}
         <section className="py-24 border-t border-white/5 bg-white/[0.02]">
           <div className="max-w-6xl mx-auto px-4">
             <div className="text-center mb-16">
@@ -217,15 +202,13 @@ export default function Home() {
               ))}
             </div>
             <div className="text-center mt-12">
-              <WAButton
-                className="inline-flex items-center gap-2 bg-yellow-400 text-black font-bold px-10 py-4 rounded-full text-base hover:bg-yellow-300 transition-colors">
+              <WAButton className="inline-flex items-center gap-2 bg-yellow-400 text-black font-bold px-10 py-4 rounded-full text-base hover:bg-yellow-300 transition-colors">
                 Chamar Táxi Agora
-              </a>
+              </WAButton>
             </div>
           </div>
         </section>
 
-        {/* REVIEWS */}
         <section className="py-24 border-t border-white/5">
           <div className="max-w-6xl mx-auto px-4">
             <div className="text-center mb-16">
@@ -250,7 +233,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* FAQ */}
         <section id="faq" className="py-24 border-t border-white/5 bg-white/[0.02]">
           <div className="max-w-3xl mx-auto px-4">
             <div className="text-center mb-16">
@@ -271,7 +253,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CTA */}
         <section id="contato" className="py-24 border-t border-white/5">
           <div className="max-w-3xl mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-5xl font-extrabold mb-6">
@@ -279,10 +260,9 @@ export default function Home() {
             </h2>
             <p className="text-gray-400 text-lg mb-10">A Giroto Táxi está disponível 24 horas por dia, 7 dias por semana.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <WAButton
-                className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-10 py-4 rounded-full text-lg transition-all">
+              <WAButton className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-10 py-4 rounded-full text-lg transition-all">
                 Chamar no WhatsApp
-              </a>
+              </WAButton>
               <a href={PHONE}
                 className="flex items-center justify-center gap-2 border border-white/20 hover:border-yellow-400 hover:text-yellow-400 text-white font-semibold px-10 py-4 rounded-full text-lg transition-all">
                 (44) 99891-3040
@@ -291,7 +271,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* FOOTER RICO */}
         <footer className="border-t border-white/10 pt-16 pb-8 bg-black/50">
           <div className="max-w-6xl mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-5 gap-10 mb-12">
@@ -305,7 +284,7 @@ export default function Home() {
                 </div>
                 <p className="text-gray-500 text-sm leading-relaxed mb-4">Serviço de táxi 24 horas em Umuarama. Transporte seguro, rápido e confortável.</p>
                 <a href={PHONE} className="text-yellow-400 font-bold text-sm hover:text-yellow-300 transition-colors block mb-1">(44) 99891-3040</a>
-                <WAButton className="text-green-400 font-bold text-sm hover:text-green-300 transition-colors block">WhatsApp</a>
+                <WAButton className="text-green-400 font-bold text-sm hover:text-green-300 transition-colors block">WhatsApp</WAButton>
               </div>
               {footerGroups.map(group => (
                 <div key={group.title}>
@@ -329,7 +308,6 @@ export default function Home() {
           </div>
         </footer>
 
-        {/* MOBILE STICKY */}
         <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#0a0a0a]/95 backdrop-blur-md border-t border-white/10 p-3">
           <div className="flex items-center justify-center gap-1.5 mb-2 text-[11px] text-gray-400 font-medium">
             <span className="relative flex h-1.5 w-1.5">
@@ -339,11 +317,10 @@ export default function Home() {
             Táxi disponível agora em Umuarama
           </div>
           <div className="flex gap-2.5">
-            <WAButton
-              className="flex-1 flex flex-col items-center justify-center gap-0.5 h-14 bg-green-500 rounded-2xl font-bold text-white text-sm active:scale-95 transition-transform">
+            <WAButton className="flex-1 flex flex-col items-center justify-center gap-0.5 h-14 bg-green-500 rounded-2xl font-bold text-white text-sm active:scale-95 transition-transform">
               <span>WhatsApp</span>
               <span className="text-[10px] text-green-100 font-normal">Resposta em segundos</span>
-            </a>
+            </WAButton>
             <a href={PHONE}
               className="flex-1 flex flex-col items-center justify-center gap-0.5 h-14 border border-white/20 rounded-2xl font-semibold text-white text-sm active:scale-95 transition-transform">
               <span>Ligar Agora</span>
