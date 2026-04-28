@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import WAButton from "@/components/WAButton";
 import { pagesData } from "@/lib/pages-data";
 
 export const metadata: Metadata = {
@@ -11,9 +12,9 @@ export const metadata: Metadata = {
 const WA_LINK = "https://wa.me/5544998913040?text=Ol%C3%A1!%20Preciso%20de%20um%20t%C3%A1xi%20em%20Umuarama%20agora.";
 const PHONE = "tel:+5544998913040";
 
-declare const gtag: (...args: any[]) => void;
 
-function trackWA() {
+
+
   if (typeof gtag !== 'undefined') {
     gtag('event', 'conversion', { 'send_to': 'AW-634068108/0kpoCM-S8pscEIy5rK4C' });
   }
@@ -116,7 +117,7 @@ export default function Home() {
               <Link href="/blog" className="hover:text-yellow-400 transition-colors">Blog</Link>
               <Link href="#contato" className="hover:text-yellow-400 transition-colors">Contato</Link>
             </div>
-            <a href={WA_LINK} target="_blank" rel="noreferrer" onClick={trackWA}
+            <WAButton
               className="flex items-center gap-2 bg-yellow-400 text-black font-bold px-5 py-2 rounded-full text-sm hover:bg-yellow-300 transition-colors">
               Chamar no WhatsApp
             </a>
@@ -142,7 +143,7 @@ export default function Home() {
                 Serviço de táxi em Umuarama com atendimento imediato, motoristas profissionais e conforto para qualquer destino.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 mb-8">
-                <a href={WA_LINK} target="_blank" rel="noreferrer" onClick={trackWA}
+                <WAButton
                   className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-8 py-4 rounded-2xl text-base transition-all shadow-[0_0_40px_rgba(34,197,94,0.3)]">
                   Chamar no WhatsApp
                 </a>
@@ -216,7 +217,7 @@ export default function Home() {
               ))}
             </div>
             <div className="text-center mt-12">
-              <a href={WA_LINK} target="_blank" rel="noreferrer" onClick={trackWA}
+              <WAButton
                 className="inline-flex items-center gap-2 bg-yellow-400 text-black font-bold px-10 py-4 rounded-full text-base hover:bg-yellow-300 transition-colors">
                 Chamar Táxi Agora
               </a>
@@ -278,7 +279,7 @@ export default function Home() {
             </h2>
             <p className="text-gray-400 text-lg mb-10">A Giroto Táxi está disponível 24 horas por dia, 7 dias por semana.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={WA_LINK} target="_blank" rel="noreferrer" onClick={trackWA}
+              <WAButton
                 className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-10 py-4 rounded-full text-lg transition-all">
                 Chamar no WhatsApp
               </a>
@@ -304,7 +305,7 @@ export default function Home() {
                 </div>
                 <p className="text-gray-500 text-sm leading-relaxed mb-4">Serviço de táxi 24 horas em Umuarama. Transporte seguro, rápido e confortável.</p>
                 <a href={PHONE} className="text-yellow-400 font-bold text-sm hover:text-yellow-300 transition-colors block mb-1">(44) 99891-3040</a>
-                <a href={WA_LINK} target="_blank" rel="noreferrer" onClick={trackWA} className="text-green-400 font-bold text-sm hover:text-green-300 transition-colors block">WhatsApp</a>
+                <WAButton className="text-green-400 font-bold text-sm hover:text-green-300 transition-colors block">WhatsApp</a>
               </div>
               {footerGroups.map(group => (
                 <div key={group.title}>
@@ -338,7 +339,7 @@ export default function Home() {
             Táxi disponível agora em Umuarama
           </div>
           <div className="flex gap-2.5">
-            <a href={WA_LINK} target="_blank" rel="noreferrer" onClick={trackWA}
+            <WAButton
               className="flex-1 flex flex-col items-center justify-center gap-0.5 h-14 bg-green-500 rounded-2xl font-bold text-white text-sm active:scale-95 transition-transform">
               <span>WhatsApp</span>
               <span className="text-[10px] text-green-100 font-normal">Resposta em segundos</span>
