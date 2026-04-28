@@ -3,11 +3,25 @@ import "./globals.css";
 import Script from "next/script";
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://girototaxiumuarama.com.br'),
   title: "Táxi em Umuarama 24h | Giroto Táxi — (44) 99891-3040",
   description: "Táxi em Umuarama 24 horas por dia. Corridas rápidas, táxi executivo e viagens intermunicipais. Chame agora pelo WhatsApp!",
   icons: {
     icon: "/icon.svg",
     apple: "/icon.svg",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'pt_BR',
+    siteName: 'Giroto Táxi Umuarama',
   },
 };
 

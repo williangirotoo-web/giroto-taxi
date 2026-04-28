@@ -18,6 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: page.metaTitle,
     description: page.metaDescription,
     keywords: `${page.keyword}, táxi umuarama, giroto táxi, taxi umuarama`,
+    alternates: { canonical: `https://girototaxiumuarama.com.br/${page.slug}` },
     openGraph: {
       title: page.metaTitle,
       description: page.metaDescription,

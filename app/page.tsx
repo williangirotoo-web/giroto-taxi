@@ -6,6 +6,7 @@ import WAButton from "@/components/WAButton";
 export const metadata: Metadata = {
   title: "Táxi em Umuarama 24h | Giroto Táxi — (44) 99891-3040",
   description: "Táxi em Umuarama 24 horas por dia, 7 dias por semana. Serviço de táxi em Umuarama com corridas rápidas, táxi executivo, viagens intermunicipais e traslado para aeroporto. Chame agora pelo WhatsApp!",
+  alternates: { canonical: "https://girototaxiumuarama.com.br" },
   keywords: "táxi umuarama, taxi em umuarama, taxi de umuarama, serviço de táxi umuarama, corridas em umuarama taxi, táxi 24h umuarama, táxi executivo umuarama, chamar táxi umuarama, giroto táxi",
 };
 
