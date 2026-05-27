@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       title: post.metaTitle,
       description: post.metaDescription,
-      url: `https://girototaxiumuarama.com.br/blog/${post.slug}`,
+      url: `https://www.girototaxiumuarama.com.br/blog/${post.slug}`,
       siteName: "Giroto Táxi Umuarama",
       locale: "pt_BR",
       type: "article",
@@ -56,7 +56,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     description: post.metaDescription,
     datePublished: post.date,
     author: { "@type": "Organization", name: "Giroto Táxi Umuarama" },
-    publisher: { "@type": "Organization", name: "Giroto Táxi Umuarama", url: "https://girototaxiumuarama.com.br" },
+    publisher: { "@type": "Organization", name: "Giroto Táxi Umuarama", url: "https://www.girototaxiumuarama.com.br" },
   };
 
   return (

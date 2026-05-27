@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: pagina.metaTitulo || pagina.titulo,
     description: pagina.metaDescricao,
-    alternates: { canonical: `https://girototaxiumuarama.com.br/servicos/${slug}` },
+    alternates: { canonical: `https://www.girototaxiumuarama.com.br/servicos/${slug}` },
     keywords: `${pagina.palavraChave}, táxi umuarama, giroto táxi`,
   }
 }

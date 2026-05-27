@@ -18,11 +18,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: page.metaTitle,
     description: page.metaDescription,
     keywords: `${page.keyword}, táxi umuarama, giroto táxi, taxi umuarama`,
-    alternates: { canonical: `https://girototaxiumuarama.com.br/${page.slug}` },
+    alternates: { canonical: `https://www.girototaxiumuarama.com.br/${page.slug}` },
     openGraph: {
       title: page.metaTitle,
       description: page.metaDescription,
-      url: `https://girototaxiumuarama.com.br/${page.slug}`,
+      url: `https://www.girototaxiumuarama.com.br/${page.slug}`,
       siteName: "Giroto Táxi Umuarama",
       locale: "pt_BR",
       type: "website",
@@ -42,10 +42,10 @@ export default async function SubPage({ params }: { params: Promise<{ slug: stri
     "@graph": [
       {
         "@type": ["LocalBusiness", "TaxiService"],
-        "@id": `https://girototaxiumuarama.com.br/${page.slug}#business`,
+        "@id": `https://www.girototaxiumuarama.com.br/${page.slug}#business`,
         name: "Giroto Táxi Umuarama",
         description: page.metaDescription,
-        url: `https://girototaxiumuarama.com.br/${page.slug}`,
+        url: `https://www.girototaxiumuarama.com.br/${page.slug}`,
         telephone: "+55-44-99891-3040",
         address: {
           "@type": "PostalAddress",
@@ -72,8 +72,8 @@ export default async function SubPage({ params }: { params: Promise<{ slug: stri
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Início", item: "https://girototaxiumuarama.com.br" },
-          { "@type": "ListItem", position: 2, name: page.title, item: `https://girototaxiumuarama.com.br/${page.slug}` },
+          { "@type": "ListItem", position: 1, name: "Início", item: "https://www.girototaxiumuarama.com.br" },
+          { "@type": "ListItem", position: 2, name: page.title, item: `https://www.girototaxiumuarama.com.br/${page.slug}` },
         ],
       },
     ],
