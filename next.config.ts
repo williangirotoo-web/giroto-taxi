@@ -3,6 +3,14 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   async redirects() {
     return [
+      // www redirect — força sempre com www
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'girototaxiumuarama.com.br' }],
+        destination: 'https://www.girototaxiumuarama.com.br/:path*',
+        permanent: true,
+      },
+      // páginas antigas para CMS
       { source: '/taxi-para-cartorio-em-umuarama', destination: '/servicos/taxi-para-cartorio-em-umuarama', permanent: true },
       { source: '/taxi-para-feira-em-umuarama', destination: '/servicos/taxi-para-feira-em-umuarama', permanent: true },
       { source: '/taxi-para-delegacia-em-umuarama', destination: '/servicos/taxi-para-delegacia-em-umuarama', permanent: true },
