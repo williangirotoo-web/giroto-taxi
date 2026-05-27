@@ -3,6 +3,14 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false,
+    },
+  },
   robots: { index: false, follow: false },
   title: 'Serviços de Táxi em Umuarama | Giroto Táxi',
   description: 'Conheça todos os serviços de táxi em Umuarama da Giroto Táxi. Táxi executivo, aeroporto, 7 lugares e muito mais. Chame agora pelo WhatsApp!',
