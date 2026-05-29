@@ -11,7 +11,6 @@ export const metadata: Metadata = {
       follow: false,
     },
   },
-  robots: { index: false, follow: false },
   title: 'Serviços de Táxi em Umuarama | Giroto Táxi',
   description: 'Conheça todos os serviços de táxi em Umuarama da Giroto Táxi. Táxi executivo, aeroporto, 7 lugares e muito mais. Chame agora pelo WhatsApp!',
 }
