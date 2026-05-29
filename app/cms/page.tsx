@@ -27,6 +27,9 @@ export default async function CMSPage() {
   const paginas = await getPaginas()
 
   return (
+    <>
+      <meta name="robots" content="noindex, nofollow" />
+      <meta name="googlebot" content="noindex, nofollow" />
     <div className="bg-[#080808] text-white min-h-screen font-sans antialiased">
 
       {/* TOP BAR MOBILE */}
@@ -160,5 +163,6 @@ export default async function CMSPage() {
       </div>
       <div className="h-24 md:hidden" />
     </div>
+    </>
   )
 }
