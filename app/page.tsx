@@ -23,9 +23,9 @@ const services = [
 ];
 
 const reviews = [
-  { name: "Fernanda Oliveira", text: "Chegou em poucos minutos, excelente atendimento! Motorista super educado e carro impecável. O melhor táxi de Umuarama!", stars: 5, label: "Umuarama" },
-  { name: "Carlos Henrique", text: "Motorista educado e carro muito confortável. Paguei via Pix na hora, sem complicação. Recomendo para qualquer corrida.", stars: 5, label: "Cliente recorrente" },
-  { name: "Ana Paula Martins", text: "Melhor táxi de Umuarama! Fiz uma viagem até Maringá e foi perfeita — pontual, carro limpo e preço justo.", stars: 5, label: "Umuarama → Maringá" },
+  { name: "Ricardo Mendonça", text: "Precisei ir ao aeroporto de Maringá às 4h da manhã. O motorista chegou pontualmente no Jardim Panorama e me deixou no aeroporto com tempo de sobra. Serviço impecável!", stars: 5, label: "Zona 1 → Aeroporto Maringá" },
+  { name: "Carla Beatriz", text: "Uso toda semana para ir da Zona 2 até a Capacol. Frota nova 2026, motoristas educados e sempre no horário. Recomendo para qualquer empresa em Umuarama!", stars: 5, label: "Cliente corporativo" },
+  { name: "José Aparecido", text: "Minha esposa entrou em trabalho de parto de madrugada. Liguei para a Giroto Táxi e em minutos estávamos a caminho do hospital. Gratidão eterna!", stars: 5, label: "Emergência médica" },
 ];
 
 const faqs = [
