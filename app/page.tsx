@@ -5,7 +5,7 @@ import WAButton from "@/components/WAButton";
 
 export const metadata: Metadata = {
   title: "Táxi em Umuarama 24h | Giroto Táxi — (44) 99891-3040",
-  description: "Táxi em Umuarama 24 horas por dia, 7 dias por semana. Serviço de táxi em Umuarama com corridas rápidas, táxi executivo, viagens intermunicipais e traslado para aeroporto. Chame agora pelo WhatsApp!",
+  description: "Táxi em Umuarama há 50 anos. Corridas 24h a partir de R$ 25, táxi executivo, aeroporto de Maringá R$ 550, viagens para Maringá R$ 600. Frota 2026, 8 motoristas. Chame pelo WhatsApp!",
   alternates: { canonical: "https://www.girototaxiumuarama.com.br" },
   keywords: "táxi umuarama, taxi em umuarama, taxi de umuarama, serviço de táxi umuarama, corridas em umuarama taxi, táxi 24h umuarama, táxi executivo umuarama, chamar táxi umuarama, giroto táxi",
 };
@@ -14,12 +14,12 @@ const WA_LINK = "https://wa.me/5544998913040?text=Ol%C3%A1!%20Preciso%20de%20um%
 const PHONE = "tel:+5544998913040";
 
 const services = [
-  { icon: "🚖", title: "Táxi em Umuarama", desc: "Corridas rápidas por todos os bairros de Umuarama, 24 horas por dia.", slug: "corridas-taxi-umuarama" },
-  { icon: "✈️", title: "Táxi para Aeroporto", desc: "Traslado pontual para o aeroporto de Maringá e região.", slug: "taxi-aeroporto-umuarama" },
-  { icon: "🌆", title: "Viagens Intermunicipais", desc: "Táxi de Umuarama para Maringá, Cianorte, Goioerê e toda a região.", slug: "taxi-umuarama-maringa" },
-  { icon: "💼", title: "Táxi Executivo", desc: "Veículos de alto padrão para reuniões e eventos corporativos.", slug: "taxi-executivo-umuarama" },
+  { icon: "🚖", title: "Táxi em Umuarama", desc: "Corridas rápidas 24h por Zona 1, Zona 2, Centro, Jardim Panorama e toda Umuarama. ~R$ 25 pelo taxímetro oficial.", slug: "corridas-taxi-umuarama" },
+  { icon: "✈️", title: "Táxi para Aeroporto", desc: "Traslado Umuarama → Aeroporto de Maringá (HMG). Preço fixo R$ 550. Monitoramos o voo. Saída de qualquer bairro.", slug: "taxi-aeroporto-umuarama" },
+  { icon: "🌆", title: "Viagens Intermunicipais", desc: "Viagem diária pela PR-323, 130 km, ~1h30. Preço fixo R$ 600. Também Cianorte, Goioerê, Londrina e Curitiba.", slug: "taxi-umuarama-maringa" },
+  { icon: "💼", title: "Táxi Executivo", desc: "Frota 2026 para executivos e empresas. Atendemos CVale, Capacol e Umuarama Indústria. Nota fiscal disponível.", slug: "taxi-executivo-umuarama" },
   { icon: "👨‍👩‍👧‍👦", title: "Carro 7 Lugares", desc: "Espaço de sobra para toda a família ou grupo.", slug: "taxi-7-lugares-umuarama" },
-  { icon: "🏥", title: "Táxi para Hospital", desc: "Transporte rápido e seguro para clínicas e hospitais 24h.", slug: "taxi-hospital-umuarama" },
+  { icon: "🏥", title: "Táxi para Hospital", desc: "Transporte 24h para Hospital Nossa Senhora Aparecida, Uopeccan, UPA e clínicas de Umuarama.", slug: "taxi-hospital-umuarama" },
 ];
 
 const reviews = [
@@ -29,11 +29,11 @@ const reviews = [
 ];
 
 const faqs = [
-  { q: "O táxi em Umuarama funciona 24 horas?", a: "Sim! A Giroto Táxi opera 24 horas por dia, 7 dias por semana, incluindo domingos e feriados. Basta chamar pelo WhatsApp ou ligar para (44) 99891-3040." },
-  { q: "Aceita Pix ou cartão de crédito?", a: "Sim, aceitamos Pix, cartão de crédito, cartão de débito e dinheiro em espécie." },
-  { q: "Fazem viagens de Umuarama para Maringá?", a: "Sim! Realizamos viagens intermunicipais para Maringá, Cianorte, Goioerê, Cruzeiro do Oeste e toda a região noroeste do Paraná." },
-  { q: "Como chamar um táxi rápido em Umuarama?", a: "A forma mais rápida é clicar no botão do WhatsApp — uma mensagem pronta já estará preenchida." },
-  { q: "Fazem traslado para o aeroporto de Maringá?", a: "Com certeza! Fazemos traslados pontuais para o aeroporto de Maringá. Informe o horário do voo e garantimos que chegue com tempo de sobra." },
+  { q: "O táxi em Umuarama funciona 24 horas?", a: "Sim! A Giroto Táxi opera 24 horas por dia, 7 dias por semana incluindo madrugada, domingos e feriados. Já atendemos partos de madrugada e emergências médicas às 3h da manhã. Ligue (44) 99891-3040 ou WhatsApp a qualquer hora." },
+  { q: "Qual o valor de uma corrida de táxi em Umuarama?", a: "Corridas urbanas custam em média R$ 25 pelo taxímetro oficial. Umuarama para Maringá: R$ 600 preço fixo. Umuarama para Aeroporto de Maringá: R$ 550. Aceitamos Pix, cartão e dinheiro." },
+  { q: "Fazem viagens de Umuarama para Maringá?", a: "Sim! Viagens diárias pela PR-323, 130 km em ~1h30. Preço fixo R$ 600. Atendemos também Cianorte, Goioerê, Cruzeiro do Oeste, Londrina, Campo Mourão e Curitiba." },
+  { q: "Quais bairros de Umuarama vocês atendem?", a: "Atendemos toda Umuarama: Zona 1, Zona 2, Zona 3, Centro, Jardim Panorama, Jardim Aratimbó, Parque Tarumã, Parque San Marino, Shopping Palladium, Aeroporto Orlando de Carvalho e Rodoviária de Umuarama." },
+  { q: "Fazem traslado para o Aeroporto de Maringá?", a: "Sim! Traslado diário Umuarama → Aeroporto Regional de Maringá (HMG), saindo de qualquer bairro. Preço fixo R$ 550. Monitoramos o voo em tempo real. Disponível 24 horas inclusive de madrugada." },
 ];
 
 const footerGroups = [
@@ -62,13 +62,13 @@ const jsonLd = {
       "@type": ["LocalBusiness", "TaxiService"],
       "@id": "https://www.girototaxiumuarama.com.br/#business",
       name: "Giroto Táxi Umuarama",
-      description: "Serviço de táxi 24 horas em Umuarama, Paraná.",
+      description: "Giroto Táxi — serviço de táxi em Umuarama PR há mais de 50 anos. Equipe familiar de 8 motoristas, frota 2026, corridas a partir de R$ 25, traslado aeroporto Maringá R$ 550.",
       url: "https://www.girototaxiumuarama.com.br",
       telephone: "+55-44-99891-3040",
       address: { "@type": "PostalAddress", addressLocality: "Umuarama", addressRegion: "PR", postalCode: "87501-000", addressCountry: "BR" },
       geo: { "@type": "GeoCoordinates", latitude: -23.7659, longitude: -53.3208 },
       openingHoursSpecification: [{ "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], opens: "00:00", closes: "23:59" }],
-      priceRange: "$$",
+      priceRange: "R$ 25 - R$ 600",
       paymentAccepted: "Dinheiro, Cartão de Crédito, Cartão de Débito, Pix",
     },
     {
