@@ -31,17 +31,35 @@ export default defineType({
     }),
     defineField({
       name: 'titulos',
-      title: '6 Títulos da Página',
+      title: 'Títulos da Página (H2)',
       type: 'array',
       of: [{ type: 'string' }],
-      validation: Rule => Rule.max(6)
+      validation: Rule => Rule.max(12)
     }),
     defineField({
       name: 'descricoes',
-      title: '6 Descrições (200-400 letras)',
+      title: 'Descrições (parágrafos longos)',
       type: 'array',
       of: [{ type: 'text' }],
-      validation: Rule => Rule.max(6)
+      validation: Rule => Rule.max(12)
+    }),
+    defineField({
+      name: 'faqs',
+      title: 'Perguntas Frequentes',
+      type: 'array',
+      of: [{
+        type: 'object',
+        fields: [
+          { name: 'pergunta', title: 'Pergunta', type: 'string' },
+          { name: 'resposta', title: 'Resposta', type: 'text' },
+        ]
+      }],
+    }),
+    defineField({
+      name: 'linksRelacionados',
+      title: 'Páginas Relacionadas (slugs)',
+      type: 'array',
+      of: [{ type: 'string' }],
     }),
     defineField({
       name: 'palavraChave',
