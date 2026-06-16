@@ -4,11 +4,11 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
     googleBot: {
-      index: false,
-      follow: false,
+      index: true,
+      follow: true,
     },
   },
   title: 'Serviços de Táxi em Umuarama | Giroto Táxi',
@@ -27,8 +27,6 @@ export default async function CMSPage() {
 
   return (
     <>
-      <meta name="robots" content="noindex, nofollow" />
-      <meta name="googlebot" content="noindex, nofollow" />
     <div className="bg-[#080808] text-white min-h-screen font-sans antialiased">
 
       {/* TOP BAR MOBILE */}

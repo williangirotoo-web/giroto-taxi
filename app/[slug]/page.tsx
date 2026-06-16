@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const page = pagesData.find((p) => p.slug === slug);
   if (!page) return {};
   return {
-    robots: { index: false, follow: false },
+    robots: { index: true, follow: true },
     title: page.metaTitle,
     description: page.metaDescription,
     keywords: `${page.keyword}, táxi umuarama, giroto táxi, taxi umuarama`,
