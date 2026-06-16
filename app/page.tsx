@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { pagesData } from "@/lib/pages-data";
-import WAButton from "@/components/WAButton";
+import WAButton from "@/components/WAButton"
+import ReservaForm from "@/components/ReservaForm";
 
 export const metadata: Metadata = {
   title: "Táxi em Umuarama 24h | Giroto Táxi — (44) 99891-3040",
@@ -335,6 +336,7 @@ export default function Home() {
           </div>
         </section>
 
+        <ReservaForm />
         <footer className="border-t border-white/10 pt-16 pb-8 bg-black/50">
           <div className="max-w-6xl mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-5 gap-10 mb-12">

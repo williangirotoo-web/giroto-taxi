@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Script from "next/script";
+import Script from "next/script"
+import WAFloat from "@/components/WAFloat"
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.girototaxiumuarama.com.br'),
@@ -51,7 +52,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">{children}<WAFloat /></body>
     </html>
   );
 }
