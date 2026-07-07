@@ -3,10 +3,11 @@ import Link from "next/link";
 import { pagesData } from "@/lib/pages-data";
 import WAButton from "@/components/WAButton"
 import ReservaForm from "@/components/ReservaForm";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Táxi em Umuarama 24h | Giroto Táxi — (44) 99891-3040",
-  description: "Táxi em Umuarama há 50 anos. Corridas 24h a partir de R$ 25, táxi executivo, aeroporto de Maringá R$ 550, viagens para Maringá R$ 600. Frota 2026, 8 motoristas. Chame pelo WhatsApp!",
+  description: "Táxi em Umuarama há 30 anos. Corridas 24h a partir de R$ 25, táxi executivo, aeroporto de Maringá R$ 550, viagens para Maringá R$ 600. Frota 2026, 8 motoristas. Chame pelo WhatsApp!",
   alternates: { canonical: "https://www.girototaxiumuarama.com.br" },
   keywords: "táxi umuarama, taxi em umuarama, taxi de umuarama, serviço de táxi umuarama, corridas em umuarama taxi, táxi 24h umuarama, táxi executivo umuarama, chamar táxi umuarama, giroto táxi",
 };
@@ -16,12 +17,12 @@ const PHONE = "tel:+5544998913040";
 const PHONE2 = "tel:+5544984160050";
 
 const services = [
-  { icon: "🚖", title: "Táxi em Umuarama", desc: "Corridas rápidas 24h por Zona 1, Zona 2, Centro, Jardim Panorama e toda Umuarama. ~R$ 25 pelo taxímetro oficial.", slug: "corridas-taxi-umuarama" },
-  { icon: "✈️", title: "Táxi para Aeroporto", desc: "Traslado Umuarama → Aeroporto de Maringá (HMG). Preço fixo R$ 550. Monitoramos o voo. Saída de qualquer bairro.", slug: "taxi-aeroporto-umuarama" },
-  { icon: "🌆", title: "Viagens Intermunicipais", desc: "Viagem diária pela PR-323, 130 km, ~1h30. Preço fixo R$ 600. Também Cianorte, Goioerê, Londrina e Curitiba.", slug: "taxi-umuarama-maringa" },
-  { icon: "💼", title: "Táxi Executivo", desc: "Frota 2026 para executivos e empresas. Atendemos CVale, Capacol e Umuarama Indústria. Nota fiscal disponível.", slug: "taxi-executivo-umuarama" },
-  { icon: "👨‍👩‍👧‍👦", title: "Carro 7 Lugares", desc: "Espaço de sobra para toda a família ou grupo.", slug: "taxi-7-lugares-umuarama" },
-  { icon: "🏥", title: "Táxi para Hospital", desc: "Transporte 24h para Hospital Nossa Senhora Aparecida, Uopeccan, UPA e clínicas de Umuarama.", slug: "taxi-hospital-umuarama" },
+  { icon: "🚖", title: "Táxi em Umuarama", desc: "Corridas rápidas 24h por Zona 1, Zona 2, Centro, Jardim Panorama e toda Umuarama. ~R$ 25 pelo taxímetro oficial.", slug: "corridas-taxi-umuarama", img: "/fotos/f04-yaris-frota-umuarama.jpg" },
+  { icon: "✈️", title: "Táxi para Aeroporto", desc: "Traslado Umuarama → Aeroporto de Maringá (HMG). Preço fixo R$ 550. Monitoramos o voo. Saída de qualquer bairro.", slug: "taxi-aeroporto-umuarama", img: "/fotos/f06-corolla-aeroporto-umuarama.jpg" },
+  { icon: "🌆", title: "Viagens Intermunicipais", desc: "Viagem diária pela PR-323, 130 km, ~1h30. Preço fixo R$ 600. Também Cianorte, Goioerê, Londrina e Curitiba.", slug: "taxi-umuarama-maringa", img: "/fotos/f03-corolla-ponto-maringa.jpg" },
+  { icon: "💼", title: "Táxi Executivo", desc: "Frota 2026 para executivos e empresas. Atendemos CVale, Capacol e Umuarama Indústria. Nota fiscal disponível.", slug: "taxi-executivo-umuarama", img: "/fotos/f01-corolla-bourbon-executivo.jpg" },
+  { icon: "👨‍👩‍👧‍👦", title: "Carro 7 Lugares", desc: "Espaço de sobra para toda a família ou grupo.", slug: "taxi-7-lugares-umuarama", img: "/fotos/f02-taigun-taxi-7-lugares.jpg" },
+  { icon: "🏥", title: "Táxi para Hospital", desc: "Transporte 24h para Hospital Nossa Senhora Aparecida, Uopeccan, UPA e clínicas de Umuarama.", slug: "taxi-hospital-umuarama", img: "/fotos/f10-corolla-rodoviaria-umuarama.jpg" },
 ];
 
 const reviews = [
@@ -67,7 +68,7 @@ const jsonLd = {
       "@type": ["LocalBusiness", "TaxiService"],
       "@id": "https://www.girototaxiumuarama.com.br/#business",
       name: "Giroto Táxi Umuarama",
-      description: "Giroto Táxi — serviço de táxi em Umuarama PR há mais de 50 anos. Equipe familiar de 8 motoristas, frota 2026, corridas a partir de R$ 25, traslado aeroporto Maringá R$ 550.",
+      description: "Giroto Táxi — serviço de táxi em Umuarama PR há mais de 30 anos. Equipe familiar de 8 motoristas, frota 2026, corridas a partir de R$ 25, traslado aeroporto Maringá R$ 550.",
       url: "https://www.girototaxiumuarama.com.br",
       telephone: "+55-44-99891-3040",
       address: { "@type": "PostalAddress", addressLocality: "Umuarama", addressRegion: "PR", postalCode: "87501-000", addressCountry: "BR" },
@@ -134,7 +135,7 @@ export default function Home() {
                 Táxi em <span className="text-yellow-400">Umuarama</span> 24h — Rápido e Seguro
               </h1>
               <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-                A Giroto Táxi atende Umuarama há mais de 50 anos. Equipe familiar de 8 motoristas, frota 2026 e atendimento imediato pelo WhatsApp ou telefone. Corridas urbanas a partir de R$ 25.
+                A Giroto Táxi atende Umuarama há mais de 30 anos. Equipe familiar de 8 motoristas, frota 2026 e atendimento imediato pelo WhatsApp ou telefone. Corridas urbanas a partir de R$ 25.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 mb-8">
                 <WAButton className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-8 py-4 rounded-2xl text-base transition-all shadow-[0_0_40px_rgba(34,197,94,0.3)]">
@@ -146,23 +147,37 @@ export default function Home() {
                 </a>
               </div>
               <div className="flex flex-wrap gap-4 text-sm text-gray-400">
-                {["✓ 50 Anos em Umuarama", "✓ Aceitamos Pix", "✓ Atendimento 24h", "✓ Frota 2026"].map(t => (
+                {["✓ 30 Anos em Umuarama", "✓ Aceitamos Pix", "✓ Atendimento 24h", "✓ Frota 2026"].map(t => (
                   <span key={t}>{t}</span>
                 ))}
               </div>
             </div>
-            <div className="hidden md:grid grid-cols-2 gap-4">
-              {[
-                { value: "50 anos", label: "Servindo Umuarama" },
-                { value: "8", label: "Motoristas experientes" },
-                { value: "24h", label: "Disponivel sempre" },
-                { value: "R$ 25", label: "Corrida urbana" },
-              ].map(s => (
-                <div key={s.value} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-yellow-400/30 transition-colors">
-                  <p className="text-3xl font-extrabold text-yellow-400 mb-1">{s.value}</p>
-                  <p className="text-sm text-gray-400">{s.label}</p>
+            <div className="hidden md:block">
+              <div className="relative rounded-3xl overflow-hidden aspect-[4/3] border border-white/10 shadow-2xl">
+                <Image
+                  src="/fotos/f10-corolla-rodoviaria-umuarama.jpg"
+                  alt="Táxi Corolla da Giroto Táxi na Estação Rodoviária de Umuarama PR — atendimento 24 horas"
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, 600px"
+                  className="object-cover object-center"
+                  quality={85}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-5 grid grid-cols-4 gap-2">
+                  {[
+                    { value: "30", label: "anos" },
+                    { value: "8", label: "motoristas" },
+                    { value: "24h", label: "sempre" },
+                    { value: "R$25", label: "urbano" },
+                  ].map(s => (
+                    <div key={s.label} className="text-center bg-black/40 backdrop-blur-sm rounded-xl py-2 border border-white/10">
+                      <p className="text-xl font-extrabold text-yellow-400 leading-none">{s.value}</p>
+                      <p className="text-[10px] text-gray-300 mt-0.5">{s.label}</p>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </section>
@@ -178,7 +193,7 @@ export default function Home() {
               {services.map(s => (
                 <Link key={s.title} href={`/${s.slug}`}
                   className="bg-white/5 border border-white/10 hover:border-yellow-400/40 rounded-2xl p-6 transition-all hover:-translate-y-1 group">
-                  <div className="text-3xl mb-4">{s.icon}</div>
+                  <div className="relative aspect-[16/10] overflow-hidden rounded-xl mb-4"><Image src={s.img} alt={s.title + " em Umuarama - Giroto Táxi"} fill loading="lazy" sizes="(max-width: 768px) 100vw, 400px" className="object-cover group-hover:scale-105 transition-transform duration-500" quality={78} /><div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" /><span className="absolute top-2 left-2 text-2xl">{s.icon}</span></div>
                   <h3 className="font-bold text-lg mb-2 group-hover:text-yellow-400 transition-colors">{s.title}</h3>
                   <p className="text-gray-400 text-sm leading-relaxed">{s.desc}</p>
                   <p className="text-yellow-400 text-xs mt-3 font-semibold">Saiba mais →</p>
@@ -193,17 +208,17 @@ export default function Home() {
           <div className="max-w-4xl mx-auto px-4">
             <div className="text-center mb-12">
               <p className="text-yellow-400 font-semibold uppercase tracking-wider text-sm mb-3">Nossa História</p>
-              <h2 className="text-3xl md:text-5xl font-extrabold mb-4">Há mais de 50 anos transportando Umuarama</h2>
+              <h2 className="text-3xl md:text-5xl font-extrabold mb-4">Há mais de 30 anos transportando Umuarama</h2>
             </div>
             <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
-              <p>A Giroto Táxi nasceu em Umuarama há mais de cinco décadas, quando a família Giroto decidiu dedicar sua vida ao transporte de passageiros na cidade. O que começou com um único carro e muito trabalho se transformou em uma das empresas de táxi mais tradicionais do noroeste do Paraná — hoje com uma equipe familiar de 8 motoristas experientes e frota completamente renovada em 2026.</p>
-              <p>Em mais de 50 anos, a Giroto Táxi já transportou gerações inteiras de famílias umuaramenses. Levamos estudantes para a faculdade, pacientes ao Hospital Nossa Senhora Aparecida e ao Hospital Uopeccan, trabalhadores para a CVale, Capacol e as principais indústrias da cidade. Estivemos presentes em momentos alegres — casamentos, formaturas, nascimentos — e nos momentos difíceis, quando a urgência médica não espera horário.</p>
+              <p>A Giroto Táxi nasceu em Umuarama há mais de três décadas, quando a família Giroto decidiu dedicar sua vida ao transporte de passageiros na cidade. O que começou com um único carro e muito trabalho se transformou em uma das empresas de táxi mais tradicionais do noroeste do Paraná — hoje com uma equipe familiar de 8 motoristas experientes e frota completamente renovada em 2026.</p>
+              <p>Em mais de 30 anos, a Giroto Táxi já transportou gerações inteiras de famílias umuaramenses. Levamos estudantes para a faculdade, pacientes ao Hospital Nossa Senhora Aparecida e ao Hospital Uopeccan, trabalhadores para a CVale, Capacol e as principais indústrias da cidade. Estivemos presentes em momentos alegres — casamentos, formaturas, nascimentos — e nos momentos difíceis, quando a urgência médica não espera horário.</p>
               <p>Nossos motoristas conhecem cada rua de Umuarama. Cada atalho da Zona I para o Centro, cada saída do Jardim Panorama para a Rodoviária, cada caminho do Parque Tarumã para a UPA. Esse conhecimento acumulado em décadas de trabalho é o que garante que seu táxi chegue rápido e pelo melhor caminho — todos os dias, a qualquer hora.</p>
-              <p>Ser o taxista de Umuarama que as famílias confiam não é algo que se conquista da noite para o dia. É o resultado de mais de 50 anos de pontualidade, respeito e dedicação. Quando você chama a Giroto Táxi em Umuarama, está chamando a empresa que sua família provavelmente já usou antes.</p>
+              <p>Ser o taxista de Umuarama que as famílias confiam não é algo que se conquista da noite para o dia. É o resultado de mais de 30 anos de pontualidade, respeito e dedicação. Quando você chama a Giroto Táxi em Umuarama, está chamando a empresa que sua família provavelmente já usou antes.</p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
               {[
-                { n: "50+", l: "Anos em Umuarama" },
+                { n: "30+", l: "Anos em Umuarama" },
                 { n: "8", l: "Motoristas da família" },
                 { n: "24h", l: "Disponível sempre" },
                 { n: "2026", l: "Frota renovada" },
